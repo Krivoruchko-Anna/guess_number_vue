@@ -67,7 +67,7 @@ export default {
     },
 
     guessIsWrong() {
-    if (+this.guess < 0) {
+    if (+this.guess <= 0) {
         this.message = 'Enter a number from 1 to 20';
       }
 
