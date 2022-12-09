@@ -11,7 +11,7 @@
 
     <main>
       <section class="left">
-        <input type="number" class="guess" v-model="guess" />
+        <input type="number" class="guess" v-model="guess"/>
         <button @click="checkTheNumber" class="btn check">Check!</button>
       </section>
       <section class="right">
@@ -67,16 +67,12 @@ export default {
     },
 
     guessIsWrong() {
-    if (+this.guess <= 0) {
+      if (+this.guess <= 0) {
         this.message = 'Enter a number from 1 to 20';
-      }
-
-      else if (this.score > 1) {
+      } else if (this.score > 1) {
         this.message = +this.guess > this.secretNumber ? '📈 Too high!' : '📉 Too low!';
         this.score--;
-      }
-
-      else {
+      } else {
         this.message = '🐒 Game Over';
         this.score = 0;
       }
